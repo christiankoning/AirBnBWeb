@@ -1,0 +1,98 @@
+﻿@model AirbnbWeb.Model.House
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>House</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HouseName" class="control-label"></label>
+                <input asp-for="HouseName" class="form-control" />
+                <span asp-validation-for="HouseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HouseDescription" class="control-label"></label>
+                <input asp-for="HouseDescription" class="form-control" />
+                <span asp-validation-for="HouseDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HouseType" class="control-label"></label>
+                <input asp-for="HouseType" class="form-control" />
+                <span asp-validation-for="HouseType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxPerson" class="control-label"></label>
+                <input asp-for="MaxPerson" class="form-control" />
+                <span asp-validation-for="MaxPerson" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BedroomTotal" class="control-label"></label>
+                <input asp-for="BedroomTotal" class="form-control" />
+                <span asp-validation-for="BedroomTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BedTotal" class="control-label"></label>
+                <input asp-for="BedTotal" class="form-control" />
+                <span asp-validation-for="BedTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BathroomTotal" class="control-label"></label>
+                <input asp-for="BathroomTotal" class="form-control" />
+                <span asp-validation-for="BathroomTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="SmokingAllowed" /> @Html.DisplayNameFor(model => model.SmokingAllowed)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Streetname" class="control-label"></label>
+                <input asp-for="Streetname" class="form-control" />
+                <span asp-validation-for="Streetname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HouseNumber" class="control-label"></label>
+                <input asp-for="HouseNumber" class="form-control" />
+                <span asp-validation-for="HouseNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostalCode" class="control-label"></label>
+                <input asp-for="PostalCode" class="form-control" />
+                <span asp-validation-for="PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

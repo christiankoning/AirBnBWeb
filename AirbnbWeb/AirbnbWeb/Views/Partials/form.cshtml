@@ -1,0 +1,74 @@
+﻿@model AirbnbWeb.Model.Customer
+
+@{
+    ViewData["Title"] = "form";
+}
+
+<form asp-controller="Customers" asp-action="Create">
+    <div class="row g-3 p-4 pt-2">
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="text" placeholder="First name" asp-for="FirstName" />
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="text" placeholder="Last name" asp-for="LastName"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="number" min="18" placeholder="Age" asp-for="Age"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="text" placeholder="Email" asp-for="Email"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="tel" placeholder="Phone number" asp-for="Phonenumber"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="text" placeholder="Country" asp-for="Country"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="text" placeholder="Street name" asp-for="Streetname"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="text" placeholder="House number" asp-for="HouseNumber"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="text" placeholder="Postal code" asp-for="PostalCode"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="text" placeholder="City" asp-for="City"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="date" placeholder="Check in" asp-for="Reservation.Start_date"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="date" data-target-input="nearest">
+                <input class="form-control" type="date" placeholder="Check out" asp-for="Reservation.End_date"/>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary py-3 w-100" type="submit">Book Now</button>
+        </div>
+    </div>
+</form>
+
